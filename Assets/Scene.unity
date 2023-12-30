@@ -317,8 +317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea592611f109e5a409b58c32556f7122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1136367080}
-  SparksParticles: {fileID: 6573828550089270648}
+  displayedText: {fileID: 1136367080}
+  sparksParticles: {fileID: 6573828550089270648}
 --- !u!1 &1655989720
 GameObject:
   m_ObjectHideFlags: 0
