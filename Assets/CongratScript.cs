@@ -10,16 +10,10 @@ public class CongratScript : MonoBehaviour
     private List<string> textToDisplay = new List<string>();
     
     private float rotatingSpeed = 1.0f;
-    private float timeToNextText;
-
-    private int currentText;
     
     // Start is called before the first frame update
     void Start()
     {
-        timeToNextText = 0.0f;
-        currentText = 0;
-
         textToDisplay.Add("Congratulation");
         textToDisplay.Add("All Errors Fixed");
 
@@ -31,20 +25,7 @@ public class CongratScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeToNextText += Time.deltaTime;
-
-        if (timeToNextText > rotatingSpeed)
-        {
-            timeToNextText = 0.0f;
-            
-            currentText++;
-
-            if (currentText >= textToDisplay.Count)
-            {
-                currentText = 0;
-            }
-
-            displayedText.text = textToDisplay[currentText];
-        }
+        int index = (int)((Time.time / rotatingSpeed) % textToDisplay.Count);
+        displayedText.text = textToDisplay[index];
     }
 }
