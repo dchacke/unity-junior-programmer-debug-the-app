@@ -14,7 +14,7 @@ public class CongratScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textToDisplay.Add("Congratulation");
+        textToDisplay.Add("Congratulations");
         textToDisplay.Add("All Errors Fixed");
 
         displayedText.text = textToDisplay[0];
