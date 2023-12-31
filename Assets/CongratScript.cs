@@ -9,6 +9,7 @@ public class CongratScript : MonoBehaviour
     
     private List<string> textToDisplay = new List<string>();
     
+    private float rotatingSpeed = 1.0f;
     private float timeToNextText;
 
     private int currentText;
@@ -32,7 +33,7 @@ public class CongratScript : MonoBehaviour
     {
         timeToNextText += Time.deltaTime;
 
-        if (timeToNextText > 1.5f)
+        if (timeToNextText > rotatingSpeed)
         {
             timeToNextText = 0.0f;
             
